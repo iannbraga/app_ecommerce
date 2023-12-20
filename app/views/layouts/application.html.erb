@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html data-bs-theme="dark">
   <head>
     <title>AppEcommerce</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    
+    <%# Chart Js %>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
   <body>
-
     <%= render 'shared/navbar' %>
     <%= yield %>
   </body>

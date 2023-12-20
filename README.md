@@ -118,9 +118,6 @@ Para desenvolver um ecommerce em Ruby on Rails (RoR), você pode seguir este esc
     - Escolha uma plataforma de hospedagem (Heroku, AWS, etc.).
     - Configure o pipeline de deploy.
 
-
-
-
 #### Páginas
 
 **Planejamento de Páginas para o Ecommerce em Ruby on Rails:**
@@ -229,3 +226,13 @@ Para desenvolver um ecommerce em Ruby on Rails (RoR), você pode seguir este esc
     - Termos de Serviço.
 
 Certifique-se de que todas as páginas sejam acessíveis e otimizadas para uma experiência do usuário eficiente. Adapte conforme necessário com base em feedback dos usuários e evolução do negócio.
+
+
+Bibliotecas
+    Devise - Autenticação
+    Cancancan - Autorização
+    
+    Bootstrap - Front-End
+    ChartJs - Gráficos
+
+    
