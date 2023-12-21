@@ -1,0 +1,29 @@
+<div class="container-fluid pt-5">
+    <div class="container p-2 mb-5 border-1 border-top border-bottom d-flex justify-content-evenly">
+            <a class="nav-link fs-5" href="#">Todas</a>
+            <a class="nav-link fs-5" href="#">Cervejas</a>
+            <a class="nav-link fs-5" href="#">Drink</a>
+            <a class="nav-link fs-5" href="#">Bomboniere</a>
+            <a class="nav-link fs-5" href="#">Porções</a>
+    </div>
+    <div class="row">
+        <% @produtos.each do |produto| %>
+            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 d-flex justify-content-center p-3">
+                <div class="card">
+                    <img class="card-img-top p-2" src="<%= exibir_imagem(produto.imagem) %>" alt="produto">
+                    <div class="card-body text-center">
+                        <h6 class="fs-5"><%= produto.nome %></h6>
+                        <h6 class="fs-5"><%= produto.descricao %></h6>
+                        <p>R$<span class="fs-5"><%= produto.preco_ajustado %></span></p>
+                    </div>
+                    <div class="card-footer text-center border-0" style="background-color: inherit;">
+                        <ul class="list-unstyled">
+                            <li><button class="btn btn-outline-light mb-2">Adicionar <i class="bi bi-cart-plus"></i></button></li>
+                            <li class="mt-2"><span class="align-bottom">Qtd. disponível: <%= produto.quantidade_em_estoque%></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>

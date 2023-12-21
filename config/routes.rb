@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'home', to: 'pages#home', as: :home
   get 'dashboard', to: 'pages#dashboard', as: :dashboard
   
+  resources :produtos
 
   # Defines the root path route ("/")
   root "pages#home"
