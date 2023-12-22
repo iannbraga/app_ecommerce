@@ -1,8 +1,28 @@
 module ApplicationHelper
 
-    def exibir_imagem imagem
-        icon_default = 'https://imgs.search.brave.com/og2ADOOujtwtN3D_C5MamGGN6oPPOHItyGddP7COsQs/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudmV4ZWxzLmNv/bS9tZWRpYS91c2Vy/cy8zLzI4NzUxMy9p/c29sYXRlZC9wcmV2/aWV3LzQzZjIzNTFm/Y2FjNTM0MmI0M2I3/YzVkMzFkOTgyMDk0/LWEtY29uZS1kZS1i/ZWJpZGEtZGUtY2Vy/dmVqYS1kby1kaWEt/ZGUtc2Etby1wYXRy/YS1jaW8ucG5n'
+    def exibir_imagem categoria
         imagem_default = 'https://placehold.co/450x400'
-        imagem.eql?('') ? icon_default : imagem
+        
+        icon_water = 'fa-solid fa-bottle-water'
+        icon_bomboniere = 'fa-solid fa-candy-cane'
+        icon_beer = 'fa-solid fa-beer-mug-empty'
+        icon_drink = 'fa-solid fa-martini-glass-citrus '
+        icon_food = 'fa-solid fa-utensils '
+        
+        if categoria == 1
+            icon_beer
+        elsif categoria == 2
+            icon_water
+        elsif categoria == 3
+            icon_drink
+        elsif categoria == 4
+            icon_bomboniere
+        else
+            icon_food
+        end
+    end
+
+    def ativa_link link
+        current_page?(link) ? 'text-secondary ' : 'text-secondary-emphasis border-1 border-bottom'
     end
 end

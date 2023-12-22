@@ -1,0 +1,12 @@
+<div class="row">
+    <% @categorias.each do |categoria| %>
+        <div class="col-6 d-flex justify-content-center">
+            <div class="card text-center w-75" style="height: 50px;">
+                <span class="card-title p-2 mt-1">
+                    <i class="<%= exibir_imagem(categoria.id) %> fs-5 align-middle pe-2"></i>
+                    <%= categoria.nome %>
+                </span>
+            </div>
+        </div>
+    <% end %>
+</div>
